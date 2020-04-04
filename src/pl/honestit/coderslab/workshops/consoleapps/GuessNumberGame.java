@@ -29,6 +29,8 @@ public class GuessNumberGame {
             executeAction1();
         } else if ("2".equals(correctedInput)) {
             executeAction2();
+        } else if ("4".equals(correctedInput)) {
+            LottoSimulator.run();
         }
     }
 
@@ -66,7 +68,7 @@ public class GuessNumberGame {
 
     private static boolean validAction(String userInput) {
         String correctInput = userInput.trim().toLowerCase();
-        String[] validActions = {"1", "2", "3"};
+        String[] validActions = {"1", "2", "3", "4"};
         Arrays.sort(validActions); // Opcjonalne gdyby nie chciało nam się
         // wpisywać opcji w kolejności
         // alfanumerycznej
@@ -86,6 +88,7 @@ public class GuessNumberGame {
         System.out.println("(1) Nic");
         System.out.println("(2) Coś");
         System.out.println("(3) Zakończyć");
+        System.out.println("(4) Graj w lotto");
     }
 
     private static void printWelcomeMessage() {
